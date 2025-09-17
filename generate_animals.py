@@ -1,6 +1,117 @@
 from pathlib import Path
+import html
+
+BIOME_STYLES = {
+    "rainforest": {
+        "label": "Rainforest",
+        "emoji": "🌴",
+        "colors": ("#0c5a3a", "#05301b"),
+    },
+    "savannah": {
+        "label": "Savannah",
+        "emoji": "🌾",
+        "colors": ("#c47a18", "#7a4510"),
+    },
+    "desert": {
+        "label": "Desert",
+        "emoji": "🌵",
+        "colors": ("#d9822a", "#a34f16"),
+    },
+    "tundra": {
+        "label": "Tundra",
+        "emoji": "❄️",
+        "colors": ("#3b6ca1", "#1b3653"),
+    },
+    "home": {
+        "label": "Biome Adventure",
+        "emoji": "🌍",
+        "colors": ("#2b6f55", "#183b2d"),
+    },
+}
+
+ANIMAL_EMOJI = {
+    "jaguar": "🐆",
+    "poison-dart-frog": "🐸",
+    "sloth": "🦥",
+    "toucan": "🦜",
+    "capuchin-monkey": "🐒",
+    "leafcutter-ant": "🐜",
+    "harpy-eagle": "🦅",
+    "green-anaconda": "🐍",
+    "orangutan": "🦧",
+    "leaf-tailed-gecko": "🦎",
+    "amazon-river-dolphin": "🐬",
+    "scarlet-macaw": "🦜",
+    "african-elephant": "🐘",
+    "lion": "🦁",
+    "cheetah": "🐆",
+    "giraffe": "🦒",
+    "zebra": "🦓",
+    "meerkat": "🐿️",
+    "wildebeest": "🐃",
+    "secretary-bird": "🦅",
+    "african-wild-dog": "🐕",
+    "hippopotamus": "🦛",
+    "ostrich": "🐦",
+    "warthog": "🐗",
+    "fennec-fox": "🦊",
+    "dromedary-camel": "🐪",
+    "gila-monster": "🦎",
+    "roadrunner": "🐦",
+    "horned-lizard": "🦎",
+    "desert-tortoise": "🐢",
+    "bark-scorpion": "🦂",
+    "kangaroo-rat": "🐭",
+    "sidewinder-rattlesnake": "🐍",
+    "arabian-oryx": "🦌",
+    "egyptian-vulture": "🦅",
+    "jerboa": "🐹",
+    "arctic-fox": "🦊",
+    "polar-bear": "🐻‍❄️",
+    "snowy-owl": "🦉",
+    "caribou": "🦌",
+    "musk-ox": "🐂",
+    "arctic-hare": "🐇",
+    "lemming": "🐭",
+    "walrus": "🦭",
+    "narwhal": "🐋",
+    "arctic-wolf": "🐺",
+    "atlantic-puffin": "🐧",
+    "ringed-seal": "🦭",
+}
 
 BASE_DIR = Path(__file__).resolve().parent
+IMG_DIR = BASE_DIR / "assets" / "img"
+
+
+def create_svg(path: Path, emoji: str, label: str, colors: tuple[str, str]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    color_top, color_bottom = colors
+    svg = f"""<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1200 800\" role=\"img\" aria-label=\"{html.escape(label)}\">\n  <defs>\n    <linearGradient id=\"bg\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"{color_top}\" />\n      <stop offset=\"100%\" stop-color=\"{color_bottom}\" />\n    </linearGradient>\n    <radialGradient id=\"glow\" cx=\"50%\" cy=\"45%\" r=\"55%\">\n      <stop offset=\"0%\" stop-color=\"#ffffff\" stop-opacity=\"0.18\" />\n      <stop offset=\"100%\" stop-color=\"#ffffff\" stop-opacity=\"0\" />\n    </radialGradient>\n  </defs>\n  <rect width=\"1200\" height=\"800\" fill=\"url(#bg)\" rx=\"60\" />\n  <circle cx=\"900\" cy=\"140\" r=\"160\" fill=\"rgba(255, 255, 255, 0.08)\" />\n  <circle cx=\"260\" cy=\"620\" r=\"220\" fill=\"rgba(255, 255, 255, 0.07)\" />\n  <ellipse cx=\"600\" cy=\"480\" rx=\"360\" ry=\"240\" fill=\"url(#glow)\" />\n  <text x=\"600\" y=\"420\" font-size=\"260\" text-anchor=\"middle\" dominant-baseline=\"middle\" font-family=\"'Noto Color Emoji', 'Twemoji Mozilla', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif\">{html.escape(emoji)}\n  </text>\n  <text x=\"600\" y=\"640\" font-size=\"88\" text-anchor=\"middle\" fill=\"rgba(255,255,255,0.94)\" font-family=\"'Baloo 2', 'Nunito', 'Poppins', sans-serif\" font-weight=\"700\">{html.escape(label)}\n  </text>\n</svg>\n"""
+    path.write_text(svg, encoding="utf-8")
+
+
+def ensure_biome_svgs() -> None:
+    for biome, info in BIOME_STYLES.items():
+        if biome == "home":
+            filename = "home.svg"
+        else:
+            filename = f"{biome}.svg"
+        create_svg(IMG_DIR / "biomes" / filename, info["emoji"], info["label"], info["colors"])
+
+
+def ensure_animal_svgs() -> None:
+    for biome, animals_list in animals.items():
+        biome_colors = BIOME_STYLES[biome]["colors"]
+        for entry in animals_list:
+            emoji = ANIMAL_EMOJI.get(entry["slug"], "🌟")
+            label = entry["name"]
+            create_svg(
+                IMG_DIR / "animals" / biome / f"{entry['slug']}.svg",
+                emoji,
+                label,
+                biome_colors,
+            )
 
 shared_head = """<!DOCTYPE html>
 <html lang=\"en\">
@@ -1237,12 +1348,15 @@ def render_animal(biome: str, data: dict) -> str:
         "tundra": "rgba(66, 108, 163, 0.92), rgba(17, 34, 63, 0.75)",
     }
     gradient = gradients.get(biome, "rgba(20, 60, 40, 0.9), rgba(10, 30, 20, 0.75)")
+    header_image = f"../../assets/img/biomes/{biome}.svg"
+    hero_image = f"../../assets/img/animals/{biome}/{data['slug']}.svg"
+    hero_alt = f"{data['name']} illustration"
     header = (
         shared_head.format(title=f"{data['name']} Adaptations")
         + "  <body>\n"
         + "    <header\n"
         + f"      style=\"background: linear-gradient(135deg, {gradient}),\n"
-        + f"        url('{data['header_bg']}') center/cover;\"\n"
+        + f"        url('{header_image}') center/cover;\"\n"
         + "    >\n"
         + f"      <h1>{data['name']}</h1>\n"
         + f"      <p class=\"hero-text\">{data['hero_text']}</p>\n"
@@ -1255,7 +1369,7 @@ def render_animal(biome: str, data: dict) -> str:
         "tundra": "Tundra",
     }
     back_link = f"      <a class=\"back-link\" href=\"index.html\">← Back to {biome_titles[biome]} Animals</a>\n"
-    hero_section = f"""      <div class=\"animal-hero\">\n        <img\n          src=\"{data['image']}\"\n          alt=\"{data['image_alt']}\"\n        />\n        <div class=\"intro\">\n          <span class=\"biome-badge\">{biome_titles[biome]}</span>\n          <h2>{data['intro_title']}</h2>\n          <p>\n            {data['intro_body']}\n          </p>\n        </div>\n      </div>\n"""
+    hero_section = f"""      <div class=\"animal-hero\">\n        <img\n          src=\"{hero_image}\"\n          alt=\"{hero_alt}\"\n        />\n        <div class=\"intro\">\n          <span class=\"biome-badge\">{biome_titles[biome]}</span>\n          <h2>{data['intro_title']}</h2>\n          <p>\n            {data['intro_body']}\n          </p>\n        </div>\n      </div>\n"""
     adaptation_blocks = []
     for item in data["adaptations"]:
         adaptation_blocks.append(
@@ -1267,6 +1381,8 @@ def render_animal(biome: str, data: dict) -> str:
 
 
 def main() -> None:
+    ensure_biome_svgs()
+    ensure_animal_svgs()
     for biome, animals_list in animals.items():
         biome_dir = BASE_DIR / "biomes" / biome
         biome_dir.mkdir(parents=True, exist_ok=True)

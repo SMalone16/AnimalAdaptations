@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Meerkat">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c47a18" />
+      <stop offset="100%" stop-color="#7a4510" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" rx="60" />
+  <circle cx="900" cy="140" r="160" fill="rgba(255, 255, 255, 0.08)" />
+  <circle cx="260" cy="620" r="220" fill="rgba(255, 255, 255, 0.07)" />
+  <ellipse cx="600" cy="480" rx="360" ry="240" fill="url(#glow)" />
+  <text x="600" y="420" font-size="260" text-anchor="middle" dominant-baseline="middle" font-family="'Noto Color Emoji', 'Twemoji Mozilla', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif">🐿️
+  </text>
+  <text x="600" y="640" font-size="88" text-anchor="middle" fill="rgba(255,255,255,0.94)" font-family="'Baloo 2', 'Nunito', 'Poppins', sans-serif" font-weight="700">Meerkat
+  </text>
+</svg>
