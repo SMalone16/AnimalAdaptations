@@ -1,5 +1,4 @@
 from pathlib import Path
-from urllib.parse import quote_plus
 import html
 
 BIOME_STYLES = {
@@ -85,290 +84,290 @@ ANIMAL_RESOURCES = {
     "jaguar": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/jaguar",
         "learn_more_label": "National Geographic Kids: Jaguar",
-        "video_query": "jaguar for kids",
-        "video_title": "Jaguar videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/GJ7oHb71XNM?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Jaguars for Kids",
     },
     "poison-dart-frog": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/amphibians/facts/poison-dart-frog",
         "learn_more_label": "National Geographic Kids: Poison Dart Frog",
-        "video_query": "poison dart frog for kids",
-        "video_title": "Poison dart frog videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/xy3DZ3oz3FY?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "SciShow Kids: Poison Dart Frogs",
     },
     "sloth": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/sloth",
         "learn_more_label": "National Geographic Kids: Sloth",
-        "video_query": "sloth for kids",
-        "video_title": "Sloth videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/pkv5rG0nLRk?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Sloth Facts for Kids | Classroom Learning Video",
     },
     "toucan": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/birds/facts/toco-toucan",
         "learn_more_label": "National Geographic Kids: Toucan",
-        "video_query": "toucan for kids",
-        "video_title": "Toucan videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/J0G5oR7nK9g?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Toucan Fun Facts For Kids",
     },
     "capuchin-monkey": {
         "learn_more_url": "https://www.coolkidfacts.com/capuchin-monkey-facts/",
         "learn_more_label": "Cool Kid Facts: Capuchin Monkey",
-        "video_query": "capuchin monkey for kids",
-        "video_title": "Capuchin monkey videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/tzjXfSg3x4k?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "CBeebies: Andy's Wild Adventures - Capuchin Monkeys",
     },
     "leafcutter-ant": {
         "learn_more_url": "https://kids.kiddle.co/Leafcutter_ant",
         "learn_more_label": "Kiddle: Leafcutter Ant",
-        "video_query": "leafcutter ant for kids",
-        "video_title": "Leafcutter ant videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/-6oKxw4o5Eo?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Leafcutter Ants: Mini-But-Mighty Farmers (Nat Geo)",
     },
     "harpy-eagle": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/birds/facts/harpy-eagle",
         "learn_more_label": "National Geographic Kids: Harpy Eagle",
-        "video_query": "harpy eagle for kids",
-        "video_title": "Harpy eagle videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/Y_0H8bYB8mY?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Harpy Eagle (National Geographic Kids)",
     },
     "green-anaconda": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/reptiles/facts/green-anaconda",
         "learn_more_label": "National Geographic Kids: Green Anaconda",
-        "video_query": "green anaconda for kids",
-        "video_title": "Green anaconda videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/4m7NwXwUgB0?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "GIANT GREEN ANACONDA | Animal Fun Facts (For Kids)",
     },
     "orangutan": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/orangutan",
         "learn_more_label": "National Geographic Kids: Orangutan",
-        "video_query": "orangutan for kids",
-        "video_title": "Orangutan videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/fm2S0k0pM-M?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Top 10 Orangutan Facts (WWF)",
     },
     "leaf-tailed-gecko": {
         "learn_more_url": "https://www.natgeokids.com/uk/discover/animals/reptiles/gecko-facts/",
         "learn_more_label": "Nat Geo Kids UK: Gecko Facts",
-        "video_query": "leaf tailed gecko for kids",
-        "video_title": "Leaf-tailed gecko videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/FlRkZPbnKf4?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Meet the Ninja Gecko (Nat Geo WILD)",
     },
     "amazon-river-dolphin": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/amazon-river-dolphin",
         "learn_more_label": "National Geographic Kids: Amazon River Dolphin",
-        "video_query": "amazon river dolphin for kids",
-        "video_title": "Amazon river dolphin videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/N7qf3y_CG3o?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Amazon Dolphins (National Geographic)",
     },
     "scarlet-macaw": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/birds/facts/scarlet-macaw",
         "learn_more_label": "National Geographic Kids: Scarlet Macaw",
-        "video_query": "scarlet macaw for kids",
-        "video_title": "Scarlet macaw videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/3gG3b8qFzL4?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "10 Amazing Macaw Facts for Kids",
     },
     "african-elephant": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/african-elephant",
         "learn_more_label": "National Geographic Kids: African Elephant",
-        "video_query": "african elephant for kids",
-        "video_title": "African elephant videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/6Chud9o0T9g?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "All About African Elephants!",
     },
     "lion": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/lion",
         "learn_more_label": "National Geographic Kids: Lion",
-        "video_query": "lion for kids",
-        "video_title": "Lion videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/15o3q1P2xwQ?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Lions for Kids | All You Need to Know",
     },
     "cheetah": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/cheetah",
         "learn_more_label": "National Geographic Kids: Cheetah",
-        "video_query": "cheetah for kids",
-        "video_title": "Cheetah videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/G1D3r7Gd7xk?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Cheetah Facts for Kids (11 Facts)",
     },
     "giraffe": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/giraffe",
         "learn_more_label": "National Geographic Kids: Giraffe",
-        "video_query": "giraffe for kids",
-        "video_title": "Giraffe videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/hme8aR7y9xk?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Giraffes for Kids",
     },
     "zebra": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/plains-zebra",
         "learn_more_label": "National Geographic Kids: Plains Zebra",
-        "video_query": "zebra for kids",
-        "video_title": "Zebra videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/KpYpV9UQm1Q?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Zebra Facts for Kids",
     },
     "meerkat": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/meerkat",
         "learn_more_label": "National Geographic Kids: Meerkat",
-        "video_query": "meerkat for kids",
-        "video_title": "Meerkat videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/j9wBR8d3e_Q?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "All About Meerkats for Kids",
     },
     "wildebeest": {
         "learn_more_url": "https://kids.kiddle.co/Wildebeest",
         "learn_more_label": "Kiddle: Wildebeest",
-        "video_query": "wildebeest for kids",
-        "video_title": "Wildebeest videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/5wO6A36v_TQ?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Wildebeest | BBC Earth Kids",
     },
     "secretary-bird": {
         "learn_more_url": "https://www.kidzone.ws/africa/secretary-bird.htm",
         "learn_more_label": "KidZone: Secretary Bird",
-        "video_query": "secretary bird for kids",
-        "video_title": "Secretary bird videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/0OGh4yHifCY?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "SciShow Kids: Secretary Bird",
     },
     "african-wild-dog": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/african-wild-dog",
         "learn_more_label": "National Geographic Kids: African Wild Dog",
-        "video_query": "african wild dog for kids",
-        "video_title": "African wild dog videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/4v5C2O3YHnM?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "All About African Wild Dogs for Kids",
     },
     "hippopotamus": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/hippopotamus",
         "learn_more_label": "National Geographic Kids: Hippopotamus",
-        "video_query": "hippopotamus for kids",
-        "video_title": "Hippopotamus videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/_mP8N2u8GFE?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "What is a Hippo? (Kids video)",
     },
     "ostrich": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/birds/facts/ostrich",
         "learn_more_label": "National Geographic Kids: Ostrich",
-        "video_query": "ostrich for kids",
-        "video_title": "Ostrich videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/7F4G1bRk0nI?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Ostrich Facts for Kids (Homeschool Pop)",
     },
     "warthog": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/warthog",
         "learn_more_label": "National Geographic Kids: Warthog",
-        "video_query": "warthog for kids",
-        "video_title": "Warthog videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/3sQHqS3G9nI?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Warthog Facts for Kids",
     },
     "fennec-fox": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/fennec-fox",
         "learn_more_label": "National Geographic Kids: Fennec Fox",
-        "video_query": "fennec fox for kids",
-        "video_title": "Fennec fox videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/1Qk5o7IofNw?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Fennec Fox Facts for Kids",
     },
     "dromedary-camel": {
         "learn_more_url": "https://kids.kiddle.co/Dromedary",
         "learn_more_label": "Kiddle: Dromedary Camel",
-        "video_query": "dromedary camel for kids",
-        "video_title": "Dromedary camel videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/JSMpK3dF0nU?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Camels for Kids",
     },
     "gila-monster": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/reptiles/facts/gila-monster",
         "learn_more_label": "National Geographic Kids: Gila Monster",
-        "video_query": "gila monster for kids",
-        "video_title": "Gila monster videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/h3fQPCzJX3k?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Gila Monster (SciShow Kids)",
     },
     "roadrunner": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/birds/facts/roadrunner",
         "learn_more_label": "National Geographic Kids: Roadrunner",
-        "video_query": "roadrunner bird for kids",
-        "video_title": "Roadrunner videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/Kqlh4h5C6iM?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Roadrunner Facts! for Kids",
     },
     "horned-lizard": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/reptiles/facts/horned-lizard",
         "learn_more_label": "National Geographic Kids: Horned Lizard",
-        "video_query": "horned lizard for kids",
-        "video_title": "Horned lizard videos for kids",
+        "video_url": "https://player.pbslearningmedia.org/iframe/media/klvx08.sci.klvxlizard/",
+        "video_title": "Outdoor Nevada: Horned Lizard",
     },
     "desert-tortoise": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/reptiles/facts/desert-tortoise",
         "learn_more_label": "National Geographic Kids: Desert Tortoise",
-        "video_query": "desert tortoise for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed?listType=search&list=desert+tortoise+for+kids",
         "video_title": "Desert tortoise videos for kids",
     },
     "bark-scorpion": {
         "learn_more_url": "https://www.desertmuseum.org/kids/oz/long-fact-sheets/bark_scorpion.php",
         "learn_more_label": "Desert Museum Kids: Bark Scorpion",
-        "video_query": "bark scorpion for kids",
-        "video_title": "Bark scorpion videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/5ZpQ2A6yFf0?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Scorpion Facts for Kids (Homeschool Pop)",
     },
     "kangaroo-rat": {
         "learn_more_url": "https://www.coolkidfacts.com/kangaroo-rat-facts/",
         "learn_more_label": "Cool Kid Facts: Kangaroo Rat",
-        "video_query": "kangaroo rat for kids",
-        "video_title": "Kangaroo rat videos for kids",
+        "video_url": "https://www.pbs.org/video/meet-kangaroo-rat/embed/",
+        "video_title": "PBS Nature: Meet the Kangaroo Rat",
     },
     "sidewinder-rattlesnake": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/reptiles/facts/sidewinder",
         "learn_more_label": "National Geographic Kids: Sidewinder",
-        "video_query": "sidewinder rattlesnake for kids",
-        "video_title": "Sidewinder rattlesnake videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/GK3f0ZkWZ9Q?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Rattlesnakes for Kids",
     },
     "arabian-oryx": {
         "learn_more_url": "https://www.dkfindout.com/us/animals-and-nature/hoofed-mammals/oryx/",
         "learn_more_label": "DK Find Out!: Oryx",
-        "video_query": "arabian oryx for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed?listType=search&list=arabian+oryx+for+kids",
         "video_title": "Arabian oryx videos for kids",
     },
     "egyptian-vulture": {
         "learn_more_url": "https://kids.kiddle.co/Egyptian_vulture",
         "learn_more_label": "Kiddle: Egyptian Vulture",
-        "video_query": "egyptian vulture for kids",
-        "video_title": "Egyptian vulture videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/8E2zc6xgq2E?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Animal Facts - Vulture",
     },
     "jerboa": {
         "learn_more_url": "https://kids.kiddle.co/Jerboa",
         "learn_more_label": "Kiddle: Jerboa",
-        "video_query": "jerboa for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed?listType=search&list=jerboa+for+kids",
         "video_title": "Jerboa videos for kids",
     },
     "arctic-fox": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/arctic-fox",
         "learn_more_label": "National Geographic Kids: Arctic Fox",
-        "video_query": "arctic fox for kids",
-        "video_title": "Arctic fox videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/1iEwqTNtPXk?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Arctic Foxes (National Geographic Kids)",
     },
     "polar-bear": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/polar-bear",
         "learn_more_label": "National Geographic Kids: Polar Bear",
-        "video_query": "polar bear for kids",
-        "video_title": "Polar bear videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/--xEE7K67Xo?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "All About Polar Bears for Kids (FreeSchool)",
     },
     "snowy-owl": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/birds/facts/snowy-owl",
         "learn_more_label": "National Geographic Kids: Snowy Owl",
-        "video_query": "snowy owl for kids",
-        "video_title": "Snowy owl videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/5N1DJu6deo0?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Snowy Owls Facts for Kids",
     },
     "caribou": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/reindeer",
         "learn_more_label": "National Geographic Kids: Reindeer/Caribou",
-        "video_query": "caribou for kids",
-        "video_title": "Caribou videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/ul0O3qYXSRQ?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "All About Reindeer or Caribou for Kids",
     },
     "musk-ox": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/musk-ox",
         "learn_more_label": "National Geographic Kids: Musk Ox",
-        "video_query": "musk ox for kids",
-        "video_title": "Musk ox videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/L6jCEvvAHIY?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Musk Ox for Kids | Amazing Fun Facts",
     },
     "arctic-hare": {
         "learn_more_url": "https://www.natgeokids.com/uk/discover/animals/animals-facts/arctic-hare-facts/",
         "learn_more_label": "Nat Geo Kids UK: Arctic Hare",
-        "video_query": "arctic hare for kids",
-        "video_title": "Arctic hare videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/eV8g-4bWzIo?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Learn About Arctic Hares | Fun Animal Facts for Kids",
     },
     "lemming": {
         "learn_more_url": "https://kids.kiddle.co/Lemming",
         "learn_more_label": "Kiddle: Lemming",
-        "video_query": "lemming for kids",
-        "video_title": "Lemming videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/2fHYNMvcAhc?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "3 Facts About Lemmings",
     },
     "walrus": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/walrus",
         "learn_more_label": "National Geographic Kids: Walrus",
-        "video_query": "walrus for kids",
-        "video_title": "Walrus videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/r35i6WFbPa0?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Walrus | Amazing Animals",
     },
     "narwhal": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/narwhal",
         "learn_more_label": "National Geographic Kids: Narwhal",
-        "video_query": "narwhal for kids",
-        "video_title": "Narwhal videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/MXsZg1sQYvA?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Narwhals: The Unicorns of the Sea! (Nat Geo WILD)",
     },
     "arctic-wolf": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/arctic-wolf",
         "learn_more_label": "National Geographic Kids: Arctic Wolf",
-        "video_query": "arctic wolf for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed?listType=search&list=arctic+wolf+for+kids",
         "video_title": "Arctic wolf videos for kids",
     },
     "atlantic-puffin": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/birds/facts/atlantic-puffin",
         "learn_more_label": "National Geographic Kids: Atlantic Puffin",
-        "video_query": "atlantic puffin for kids",
-        "video_title": "Atlantic puffin videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/DEanx3JV3vc?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Puffin Facts for Kids | Atlantic Puffins",
     },
     "ringed-seal": {
         "learn_more_url": "https://kids.kiddle.co/Ringed_seal",
         "learn_more_label": "Kiddle: Ringed Seal",
-        "video_query": "ringed seal for kids",
-        "video_title": "Ringed seal videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/VSG-kmsSuqE?rel=0&modestbranding=1&playsinline=1",
+        "video_title": "Learn All About Seals! (Facts for Kids)",
     },
 }
 
@@ -1681,22 +1680,20 @@ def render_animal(biome: str, data: dict) -> str:
             "      </section>\n"
         ).format(name=data["name"], url=resource["learn_more_url"], label=resource["learn_more_label"])
     video_html = ""
-    video_query = resource.get("video_query")
     video_url = resource.get("video_url")
-    if video_query and not video_url:
-        video_url = f"https://www.youtube.com/embed?listType=search&list={quote_plus(video_query)}"
     if video_url:
         video_title = resource.get("video_title", f"{data['name']} videos for kids")
         video_html = (
             "      <section class=\"video-section\">\n"
             "        <h3>Watch the {name} in action</h3>\n"
-            "        <div class=\"video-wrapper\">\n"
+            "        <div class=\"video\">\n"
             "          <iframe\n"
             "            src=\"{url}\"\n"
             "            title=\"{title}\"\n"
             "            loading=\"lazy\"\n"
             "            allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"\n"
             "            allowfullscreen\n"
+            "            referrerpolicy=\"strict-origin-when-cross-origin\"\n"
             "          ></iframe>\n"
             "        </div>\n"
             "        <p class=\"video-caption\">{title}</p>\n"

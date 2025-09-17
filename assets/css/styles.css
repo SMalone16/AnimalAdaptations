@@ -224,16 +224,19 @@ header p {
   text-decoration: underline;
 }
 
-.video-wrapper {
+.video {
   position: relative;
-  padding-top: 56.25%;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 720px;
+  margin: 1rem auto;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--shadow);
-  margin-top: 1rem;
+  background: #000;
 }
 
-.video-wrapper iframe {
+.video iframe {
   position: absolute;
   inset: 0;
   width: 100%;
