@@ -37,9 +37,8 @@ footer {
 }
 
 header {
-  background: linear-gradient(135deg, rgba(30, 109, 93, 0.9), rgba(35, 49, 63, 0.8)),
-    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80')
-      center/cover;
+  background: linear-gradient(135deg, rgba(43, 111, 85, 0.92), rgba(24, 59, 45, 0.78)),
+    url('../img/biomes/home.svg') center/cover;
   color: #fff;
   text-align: center;
   padding: 3rem 1rem 4rem;
@@ -77,20 +76,9 @@ header p {
   box-shadow: var(--shadow);
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  position: relative;
-  min-height: 240px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-}
-
-.card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transition: opacity 0.25s ease;
+  min-height: 280px;
 }
 
 .card:hover,
@@ -99,22 +87,37 @@ header p {
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
 }
 
-.card:hover::before,
-.card:focus-within::before {
-  opacity: 1;
+.card-image {
+  padding: 1.75rem 1.75rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image img {
+  width: 100%;
+  max-width: 280px;
+  max-height: 170px;
+  object-fit: contain;
 }
 
 .card-content {
-  position: relative;
-  padding: 1.5rem;
-  color: #fff;
-  z-index: 1;
+  padding: 1.75rem 1.75rem 2.25rem;
+  color: var(--text-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+  justify-content: center;
 }
 
 .card h2,
 .card h3 {
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
+  color: var(--primary-color);
 }
 
 .card p {
@@ -212,6 +215,13 @@ header p {
 
 .speak-button:hover {
   transform: translateY(-2px);
+}
+
+.speak-button.is-speaking {
+  cursor: wait;
+  opacity: 0.75;
+  box-shadow: 0 6px 10px rgba(249, 168, 38, 0.28);
+  transform: none;
 }
 
 .biome-badge {
