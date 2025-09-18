@@ -261,6 +261,7 @@ ANIMAL_RESOURCES = {
         "learn_more_label": "National Geographic Kids: Desert Tortoise",
         "video_query": "desert tortoise for kids",
         "video_title": "Desert tortoise videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/l92VXmf5aac?rel=0&modestbranding=1&playsinline=1",
     },
     "bark-scorpion": {
         "learn_more_url": "https://www.desertmuseum.org/kids/oz/long-fact-sheets/bark_scorpion.php",
@@ -285,6 +286,7 @@ ANIMAL_RESOURCES = {
         "learn_more_label": "DK Find Out!: Oryx",
         "video_query": "arabian oryx for kids",
         "video_title": "Arabian oryx videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/l92VXmf5aac?rel=0&modestbranding=1&playsinline=1",
     },
     "egyptian-vulture": {
         "learn_more_url": "https://kids.kiddle.co/Egyptian_vulture",
@@ -297,6 +299,7 @@ ANIMAL_RESOURCES = {
         "learn_more_label": "Kiddle: Jerboa",
         "video_query": "jerboa for kids",
         "video_title": "Jerboa videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/l92VXmf5aac?rel=0&modestbranding=1&playsinline=1",
     },
     "arctic-fox": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/mammals/facts/arctic-fox",
@@ -357,6 +360,7 @@ ANIMAL_RESOURCES = {
         "learn_more_label": "National Geographic Kids: Arctic Wolf",
         "video_query": "arctic wolf for kids",
         "video_title": "Arctic wolf videos for kids",
+        "video_url": "https://www.youtube-nocookie.com/embed/mRP1iPurV9Y?rel=0&modestbranding=1&playsinline=1",
     },
     "atlantic-puffin": {
         "learn_more_url": "https://kids.nationalgeographic.com/animals/birds/facts/atlantic-puffin",
