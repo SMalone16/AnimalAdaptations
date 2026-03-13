@@ -22,3 +22,10 @@ This project is a GitHub Pages-friendly site that helps first grade students exp
 ## Local Preview
 
 You can open `index.html` directly in a browser or use a lightweight web server (for example, `python -m http.server`) to preview and test the SpeechSynthesis audio interactions.
+
+
+## Interaction & Accessibility
+
+- **Touch feedback:** tappable cards, back links, and "Hear this adaptation" buttons include subtle active-state motion and contrast shifts so touch interactions feel acknowledged without large movement.
+- **Keyboard visibility:** `.card`, `.speak-button`, `.back-link`, and `.learn-more-link` all use a high-contrast `:focus-visible` outline so students and educators using keyboards or assistive navigation can see exactly which element is focused.
+- **Hover + focus pairing:** card elevation effects support both pointer hover and focus-based navigation to preserve discoverability across input methods.
