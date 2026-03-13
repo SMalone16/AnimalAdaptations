@@ -87,6 +87,11 @@ header p {
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
 }
 
+.card:active {
+  transform: translateY(-2px) scale(0.99);
+  filter: contrast(1.02);
+}
+
 .card-image {
   padding: 1.75rem 1.75rem 0;
   display: flex;
@@ -136,6 +141,11 @@ header p {
 
 .back-link:hover {
   transform: translateX(-4px);
+}
+
+.back-link:active {
+  transform: translateX(-2px);
+  filter: contrast(1.06);
 }
 
 .hero-text {
@@ -271,11 +281,25 @@ header p {
   transform: translateY(-2px);
 }
 
+.speak-button:active {
+  transform: translateY(0) scale(0.98);
+  filter: contrast(1.05);
+}
+
 .speak-button.is-speaking {
   cursor: wait;
   opacity: 0.75;
   box-shadow: 0 6px 10px rgba(249, 168, 38, 0.28);
   transform: none;
+}
+
+.card:focus-visible,
+.speak-button:focus-visible,
+.back-link:focus-visible,
+.learn-more-link:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 4px;
+  border-radius: 10px;
 }
 
 .biome-badge {
